@@ -1,0 +1,15 @@
+var num1=Math.floor(Math.random()*19)
+var num2=Math.floor(Math.random()*19)
+var num3=Math.floor(Math.random()*19)
+
+console.log(num1)
+console.log(num2)
+console.log(num3)
+if(num1<num2)
+    if(num1<num3)
+        console.log ("El menor es: ",num1)
+        else console.log("El menor es: ", num3)
+else 
+    if (num2<num3)
+      console.log("El menor es: ",num2)
+    else console.log("El menor es: ", num3)
