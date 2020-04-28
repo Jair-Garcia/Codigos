@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Practica con HTML</title>
+    </head>
+    <body style="background-color:#DCC1BB;">
+            <h2>No sé</h2>
+            <p>En este apartado trabajaremos con tres clases diferentes: triangulo,
+                rectangulo y cuadrado. </p>
+                <!---Inicio triangulo   -->
+                <div class="container">
+                    <div class="triangulo">
+                <p><b>Triangulo</b></p>
+               <form name="trian">
+                   <p>Base
+                <input type="number" size="15" min="1" maxlength="3" name="triangulo_base">
+                    Altura
+                <input type="number" size="15" min="1" maxlength="3" name="triangulo_altura"> </p>
+                <input type="Button" name="" value=" Area " onclick="triangulo('*')">
+                <p>Area del triangulo: <input type="Text" readonly=»readonly» name="Area_triangulo" value="0" size="12">
+                   </p>
+            </form>
+                <script>
+                    function triangulo(){
+                        var triangulo_base = document.trian.triangulo_base.value
+                        var triangulo_altura = document.trian.triangulo_altura.value 
+                        var result = eval(triangulo_base * triangulo_altura)/2
+                        document.trian.Area_triangulo.value = result
+                    }
+                    </script> 
+                    </div>
+                    <!--Final triangulo--->
+                  <!--Inicio Rectangulo-->
+                  <div class="rectangulo">
+              <p><b>Rectangulo</b></p>
+              <form name="rectangulo">
+                  <p>Base
+               <input type="number" size="15" min="1" maxlength="3" name="Base">
+                   Altura
+               <input type="number" size="15" min="1" maxlength="3" name="Altura"> </p>
+               <input type="Button" name="" value=" Area " onclick="Rectangulo('*')">
+               <p>Area del rectangulo: <input type="Text" readonly=»readonly» name="Area_rectangulo" value="0" size="12"> </p>
+           </form>
+               <script>
+                   function Rectangulo(){
+                       var Base = document.rectangulo.Base.value
+                       var Altura = document.rectangulo.Altura.value 
+                       var Arear = eval(Base * Altura)
+                       document.rectangulo.Area_rectangulo.value = Arear
+                   }
+                   </script> 
+                   </div>
+                   <!--Fin rectangulo->
+               <!-Inicio cuadrado-->
+               <div class="cuadrado">
+               <p><b>Cuadrado</b></p>
+               <form name="Cuadrado">
+                   <p>Lado
+                <input type="number" size="15" min="1" maxlength="3" name="Base"></p>
+                <input type="Button" name="" value=" Area " onclick="Cuadrado('*')">
+                <p>Area del Cuadrado: <input type="Text"  readonly=»readonly» name="Area_Cuadrado" value="0" size="12"> </p>
+            </form>
+                <script>
+                    function Cuadrado(){
+                        var Base = document.Cuadrado.Lado.value 
+                        var Areac = eval( Lado* Lado)
+                        document.Cuadrado.Area_Cuadrado.value = Areac
+                    }
+                    </script>
+                    </div>
+               <!--Fin Cuadrado-->
+             </div>
+    </body>
+</html>
